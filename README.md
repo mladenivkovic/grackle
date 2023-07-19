@@ -1,3 +1,36 @@
+# Grackle-Swift
+
+This is a fork of the [grackle](https://github.com/grackle-project/grackle) library, intended
+to keep a frozen version of the library which is known and tested to work with GEAR-RT in
+[swift](https://github.com/SWIFTSIM/swiftsim) publicly available.
+
+All installation instructions and dependencies remain identical to the upstream Grackle package.
+The upstream Grackle readme is shown below.
+
+## Grackle-Swift as a spack package
+
+Additionally, I've added the relevant files to make grackle-swift available as a 
+[spack](https://github.com/spack/spack) package. The installation is straightforward:
+
+- Copy the directory `/grackle-swift/spack/var/spack/repos/builtin/packages/grackle-swift` and its
+contents into the corresponding directory in your spack clone (in the spack clone, the directory
+`/spack/var/spack/repos/builtin/packages` should exist by default. That's where spack keeps all its
+packages.)
+- install grackle-swift the way you would install any other package with spack. E.g.
+```
+$ spack install grackle-swift
+```
+or
+```
+$ spack install grackle-swift ^hdf5@1.12.2 %gcc@12.1.0
+```
+or ...
+
+
+
+
+
+
 # Grackle
 
 [![Users' Mailing List](https://img.shields.io/badge/Users-List-lightgrey.svg)](https://groups.google.com/forum/#!forum/grackle-cooling-users)
