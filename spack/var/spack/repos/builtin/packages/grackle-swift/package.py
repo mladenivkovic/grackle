@@ -19,7 +19,7 @@ class GrackleSwift(Package):
     homepage = "http://grackle.readthedocs.io/en/grackle-3.2.0/"
     url = "https://github.com/grackle-project/grackle"
 
-    version('3.2.1', '14d4244eae0eab9f5b938048d552006a', url='https://github.com/mladenivkovic/grackle-swift/archive/main.zip')
+    version('3.2.1', 'e8cfe7f944e1dd629b1faf00d20caac9', url='https://github.com/mladenivkovic/grackle-swift/archive/freeze.zip')
 
     variant("float", default=False, description="Build with float")
 
