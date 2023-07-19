@@ -7,7 +7,7 @@
 /
 / Distributed under the terms of the Enzo Public Licence.
 /
-/ The full license is in the file LICENSE, distributed with this 
+/ The full license is in the file LICENSE, distributed with this
 / software.
 ************************************************************************/
 
@@ -23,7 +23,7 @@
 
 double get_velocity_units(code_units *my_units)
 {
-  double velocity_units = my_units->length_units / my_units->time_units;
+  double velocity_units = (double) my_units->length_units / (double) my_units->time_units;
   if (my_units->comoving_coordinates == 1) {
     velocity_units /= my_units->a_value;
   }
