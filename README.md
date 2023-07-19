@@ -1,21 +1,28 @@
 # Grackle-Swift
 
-This is a fork of the [grackle](https://github.com/grackle-project/grackle) library, intended
-to keep a frozen version of the library which is known and tested to work with GEAR-RT in
-[swift](https://github.com/SWIFTSIM/swiftsim) publicly available.
+This is a fork of the [grackle](https://github.com/grackle-project/grackle) 
+library, intended to keep a frozen version of the library which is known and 
+tested to work with GEAR-RT in [swift](https://github.com/SWIFTSIM/swiftsim) 
+publicly available.
 
-All installation instructions and dependencies remain identical to the upstream Grackle package.
-The upstream Grackle readme is shown below.
+All installation instructions and dependencies remain identical to the upstream
+Grackle package. The upstream Grackle readme is shown below.
 
 ## Grackle-Swift as a spack package
 
 Additionally, I've added the relevant files to make grackle-swift available as a 
-[spack](https://github.com/spack/spack) package. The installation is straightforward:
+[spack](https://github.com/spack/spack) package. The installation is 
+straightforward:
 
-- Copy the directory `/grackle-swift/spack/var/spack/repos/builtin/packages/grackle-swift` and its
-contents into the corresponding directory in your spack clone (in the spack clone, the directory
-`/spack/var/spack/repos/builtin/packages` should exist by default. That's where spack keeps all its
-packages.)
+- Copy the directory `/grackle-swift/spack/var/spack/repos/builtin/packages/grackle-swift` 
+and its contents into the corresponding directory in your spack clone (in the 
+spack clone, the directory `/spack/var/spack/repos/builtin/packages` should exist 
+by default. That's where spack keeps all its packages.)
+- **IMPORTANT**: Copy and use the files stored in the `main` branch. Do not use 
+the files stored in the `freeze` branch. (Spack requires an md5sum to verify the
+integrity of the downloaded files. The stored md5sum in the `freeze` branch will 
+be wrong, and spack will refuse to install it. Correcting the md5sum on the `freeze`
+branch changes its md5sum, making it wrong again. So that won't work.)
 - install grackle-swift the way you would install any other package with spack. E.g.
 ```
 $ spack install grackle-swift
