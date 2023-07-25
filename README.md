@@ -8,6 +8,12 @@ publicly available.
 All installation instructions and dependencies remain identical to the upstream
 Grackle package. The upstream Grackle readme is shown below.
 
+There a script is included to set up grackle on cosma (8) with the Intel 2021
+compiler suite. Look through `src/clib/Make.mach.cosma8-intel2021` and check
+that all paths are set correctly and up to date. Then run `src/clib/myinstall.sh`.
+(Don't forget to first run ./configure).
+
+
 ## Grackle-Swift as a spack package
 
 Additionally, I've added the relevant files to make grackle-swift available as a 
