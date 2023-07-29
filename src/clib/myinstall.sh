@@ -7,6 +7,7 @@ set -e
 # also make sure to create the parent directory where you want to
 # install your grackle installation first
 mkdir -p $HOME/local/grackle-swift_intel2021.1.0
+# mkdir -p $HOME/local/grackle-swift_oneAPI2022.3.0
 
 module purge
 # module restore swift-wiki-cosma8
@@ -25,6 +26,6 @@ module load fftw/3.3.9epyc parallel_hdf5/1.10.6 parmetis/4.0.3-64bit gsl/2.5
 
 make clean
 make opt-aggressive
-make machine-cosma8-intel2021
+make machine-cosma8-intel-2021
 make -j 4
 make install
