@@ -79,7 +79,7 @@ MACH_LIBS         = $(LOCAL_LIBS_HDF5) $(LOCAL_LIBS_MACH)
 # Installation
 #-----------------------------------------------------------------------
 
-MACH_INSTALL_PREFIX = $(HOME)/local/grackle_intel2021-cosma7
+MACH_INSTALL_PREFIX = $(HOME)/local/grackle-swift_intel2021-cosma7
 MACH_INSTALL_LIB_DIR =
 MACH_INSTALL_INCLUDE_DIR =
 
