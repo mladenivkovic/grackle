@@ -40,6 +40,25 @@ $ spack install grackle-swift ^hdf5@1.12.2 %gcc@12.1.0
 or ...
 
 
+NOTE: The file was changed to work with `spack` for spack's `develop` branch on commit
+`5f58a4c0792071ca4e681e43724fe7c66c2cefce`
+
+Here's the diff:
+```
+diff --git i/spack/var/spack/repos/builtin/packages/grackle-swift/package.py w/spack/var/spack/repos/builtin/packages/grackle-swift/package.py
+index f24c17d..4d9ce4f 100644
+--- i/spack/var/spack/repos/builtin/packages/grackle-swift/package.py
++++ w/spack/var/spack/repos/builtin/packages/grackle-swift/package.py
+@@ -35,7 +35,7 @@ class GrackleSwift(Package):
+         template_name = "{0.architecture}-{0.compiler.name}"
+         grackle_architecture = template_name.format(spec)
+         link_variables = (
+-            "MACH_AR = ar" if spec.version < Version(2.2) else "MACH_LIBTOOL = libtool"
++            "MACH_AR = ar" if spec.version < Version("2.2") else "MACH_LIBTOOL = libtool"
+         )
+         substitutions = {
+             "@ARCHITECTURE": grackle_architecture,
+```
 
 
 
