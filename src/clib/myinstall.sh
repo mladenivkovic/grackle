@@ -27,7 +27,8 @@ module purge
 # module load fftw/3.3.9cosma7 # or fftw/3.3.9 on cosma 5 & 6
 # module load parallel_hdf5/1.10.6 parmetis/4.0.3-64bit gsl/2.5
 # module restore swift-wiki-cosma7
-module restore swift-gcc
+# module restore swift-gcc
+module restore swift-wiki-cosma8
 
 # module restore swift-wiki-DINE
 
@@ -35,6 +36,7 @@ make clean
 make opt-aggressive
 # make machine-DINE-intel-2022
 # make machine-cosma7-intel2021
-make machine-DINE-gcc
+# make machine-DINE-gcc
+make machine-cosma8-oneAPI-2024
 make -j
 make install
